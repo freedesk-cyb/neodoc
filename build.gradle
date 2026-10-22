@@ -33,7 +33,7 @@ ext {
     googleJavaFormatVersion = "1.35.0"
     logback = "1.6.3"
     commonsIoVersion = "2.22.0"
-    commonsLang3 = "3.20.0"
+    commonsLang3 = "3.21.0"
     rhinoVersion = "1.9.1"
     okhttpBomVersion = "5.4.0"
     gsonVersion = "2.14.0"
