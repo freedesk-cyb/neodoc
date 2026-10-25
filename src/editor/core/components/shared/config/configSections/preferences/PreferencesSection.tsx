@@ -2,7 +2,6 @@ import { type ReactNode } from "react";
 import { useTranslation } from "react-i18next";
 import { SettingsCard } from "@app/components/shared/config/SettingsCard";
 import { useAppConfig } from "@app/contexts/AppConfigContext";
-import { AdminSetupBanner } from "@app/components/shared/config/configSections/preferences/AdminSetupBanner";
 import { AppearanceCard } from "@app/components/shared/config/configSections/preferences/AppearanceCard";
 import { EditorDefaultsCard } from "@app/components/shared/config/configSections/preferences/EditorDefaultsCard";
 import { DownloadsCard } from "@app/components/shared/config/configSections/preferences/DownloadsCard";
@@ -15,18 +14,10 @@ import type {
 import "@app/components/shared/config/configSections/preferences/PreferencesSection.css";
 
 export interface PreferencesSectionProps {
-  /** SaaS: login is always on, so the "turn login on" banner never applies. */
-  hideAdminBanner?: boolean;
   /** SaaS build and managed-disabled desktop: no update UI, and no update call. */
   hideUpdateSection?: boolean;
   desktopInstall?: DesktopInstall;
   desktopUpdateMode?: DesktopUpdateModeControl;
-  /**
-   * The Account and Two-factor cards. Core has no accounts, so the flavors that
-   * do pass them in (AccountCards) rather than core reaching into proprietary.
-   * The slot supplies its own `<section>` wrappers and anchors.
-   */
-  accountSlot?: ReactNode;
   /** Extra rows under Editor defaults: login landing, desktop file defaults. */
   editorDefaultsSlot?: ReactNode;
 }
@@ -48,11 +39,9 @@ function focusIsHotkeys(): boolean {
  * registered tool and would otherwise bury everything above it.
  */
 export default function PreferencesSection({
-  hideAdminBanner = false,
   hideUpdateSection = false,
   desktopInstall,
   desktopUpdateMode,
-  accountSlot,
   editorDefaultsSlot,
 }: PreferencesSectionProps) {
   const { t } = useTranslation();
@@ -67,10 +56,6 @@ export default function PreferencesSection({
   return (
     <div className="settings-section-container">
       <div className="preferences-section">
-        {!hideAdminBanner && <AdminSetupBanner />}
-
-        {accountSlot}
-
         <SettingsCard
           id="appearance"
           title={t("settings.preferences.appearance", "Appearance")}
