@@ -12,6 +12,7 @@ import { LoadingFallback } from "@app/components/shared/LoadingFallback";
 import { useSectionHeadings } from "@app/components/settings/useSectionHeadings";
 import { useActiveHeading } from "@app/components/settings/useActiveHeading";
 import { InfoTooltip } from "@app/ui/InfoTooltip";
+import LoginRequiredBanner from "@app/components/shared/config/LoginRequiredBanner";
 import { Badge, Tooltip } from "@mantine/core";
 import { SettingsMobileBackButton } from "@app/components/shared/config/SettingsMobileBackButton";
 import { SettingsNavChevron } from "@app/components/shared/config/SettingsNavChevron";
@@ -376,7 +377,9 @@ const SettingsPageInner: React.FC = () => {
                 </div>
               </header>
             )}
-
+            {/* Once, here: every admin section used to draw this itself, so an
+                admin with login off met the same block on all thirteen. */}
+            <LoginRequiredBanner show={activeItem?.disabled ?? false} />
             {/* Its own boundary: a section that suspends must not take the
                 nav and the header down with it. */}
             <Suspense fallback={<LoadingFallback />}>
