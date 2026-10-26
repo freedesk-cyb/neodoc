@@ -2,10 +2,6 @@ import { useTranslation } from "react-i18next";
 import { SettingsCard } from "@app/components/shared/config/SettingsCard";
 import HelpSection from "@app/components/shared/config/configSections/HelpSection";
 import LegalSection from "@app/components/shared/config/configSections/LegalSection";
-import {
-  BackendThirdPartyLicensesSection,
-  FrontendThirdPartyLicensesSection,
-} from "@app/components/shared/config/configSections/ThirdPartyLicensesSection";
 import "@app/components/shared/config/configSections/AboutSection.css";
 
 export interface AboutSectionProps {
@@ -15,11 +11,8 @@ export interface AboutSectionProps {
 }
 
 /**
- * The reference material: tours, legal links and bundled licences. Each card's
- * id is the `#slug` that deep links and search results address.
- *
- * Backend licences come last: it is the only card here that fetches, and the
- * only one that can render an error in place of its list.
+ * The reference material: tours and the privacy statement. Each card's id is
+ * the `#slug` that deep links and search results address.
  */
 export default function AboutSection({
   isAdmin,
@@ -45,36 +38,10 @@ export default function AboutSection({
           title={t("settings.legal.label", "Legal")}
           description={t(
             "settings.legal.description",
-            "Terms, privacy policy and your cookie preferences.",
+            "How your data is handled.",
           )}
         >
           <LegalSection />
-        </SettingsCard>
-
-        <SettingsCard
-          id="frontendThirdPartyLicenses"
-          title={t("settings.licenses.frontendLabel", "Frontend Licenses")}
-          description={t(
-            "settings.licenses.frontendDescription",
-            "Licenses for frontend dependencies bundled into the release build.",
-          )}
-          defaultCollapsed
-          lazy
-        >
-          <FrontendThirdPartyLicensesSection />
-        </SettingsCard>
-
-        <SettingsCard
-          id="backendThirdPartyLicenses"
-          title={t("settings.licenses.backendLabel", "Backend Licenses")}
-          description={t(
-            "settings.licenses.backendDescription",
-            "Licenses for backend dependencies bundled with this server.",
-          )}
-          defaultCollapsed
-          lazy
-        >
-          <BackendThirdPartyLicensesSection />
         </SettingsCard>
       </div>
     </div>

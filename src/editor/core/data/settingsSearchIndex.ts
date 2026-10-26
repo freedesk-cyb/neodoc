@@ -116,33 +116,7 @@ export const SETTINGS_SEARCH_INDEX: SettingsSearchEntry[] = [
     anchor: "legal",
     labelKey: "settings.legal.label",
     labelFallback: "Legal",
-    keywords: ["terms", "privacy", "policy", "cookie", "consent", "gdpr"],
-  },
-  {
-    section: "about",
-    anchor: "frontendThirdPartyLicenses",
-    labelKey: "settings.licenses.frontendLabel",
-    labelFallback: "Frontend Licenses",
-    keywords: [
-      "licence",
-      "license",
-      "attribution",
-      "dependencies",
-      "open source",
-    ],
-  },
-  {
-    section: "about",
-    anchor: "backendThirdPartyLicenses",
-    labelKey: "settings.licenses.backendLabel",
-    labelFallback: "Backend Licenses",
-    keywords: [
-      "licence",
-      "license",
-      "attribution",
-      "dependencies",
-      "open source",
-    ],
+    keywords: ["privacy", "data", "local", "tracking", "cookies"],
   },
   // --- AI engine: one row per card the four folded rows became.
   {

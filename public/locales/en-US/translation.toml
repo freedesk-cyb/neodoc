@@ -6009,12 +6009,7 @@ unpaid = "Unpaid"
 
 [legal]
 accessibility = "Accessibility"
-cookie = "Cookie Policy"
-iAgreeToThe = "I agree to all of the"
 impressum = "Impressum"
-privacy = "Privacy Policy"
-showCookieBanner = "Cookie Preferences"
-terms = "Terms and Conditions"
 
 [licenses]
 title = "3rd Party Licenses"
@@ -11828,7 +11823,7 @@ backToSections = "All settings"
 title = "Settings"
 
 [settings.about]
-description = "Tours, legal documents and the licences of everything bundled with this build."
+description = "Tours and how your data is handled."
 title = "About"
 
 [settings.ai]
@@ -12034,17 +12029,15 @@ mac = "Include ⌘ (Command), ⌥ (Option), or another modifier in your shortcut
 windows = "Include Ctrl, Alt, or another modifier in your shortcut."
 
 [settings.legal]
-description = "Terms, privacy policy and your cookie preferences."
+description = "How your data is handled."
 label = "Legal"
 title = "Legal"
 
-[settings.legal.cookiePreferences]
-description = "Review or change your cookie consent choices."
-manage = "Manage"
-
-[settings.legal.documents]
-description = "Policies and legal information for this service."
-title = "Legal Documents"
+[settings.legal.statement]
+localOnly = "Your PDFs are opened, edited and exported only in your browser. No document or data is sent, saved or collected on any server, at any time."
+noCollection = "NEODOC does not collect user registration data or licence information. There are no accounts, sign-in or licences to register or validate."
+noTracking = "No tracking cookies or analytics tools are used."
+title = "Privacy and data"
 
 [settings.licenses]
 backendDescription = "Licenses for backend dependencies bundled with this server."

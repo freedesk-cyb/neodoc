@@ -103,7 +103,7 @@ export const useConfigNavSections = (
           label: t("settings.about.title", "About"),
           description: t(
             "settings.about.description",
-            "Tours, legal documents and the licences of everything bundled with this build.",
+            "Tours and how your data is handled.",
           ),
           icon: "circle-question-mark",
           component: (

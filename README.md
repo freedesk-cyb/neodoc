@@ -51,6 +51,13 @@ El resultado queda en `dist/`. Es un sitio estático: se puede servir con cualqu
 - Algunas fuentes no embebidas pueden no editarse con total fidelidad; el editor usa la fuente de respaldo incluida (`NotoSans-Regular`).
 - No hay cuentas, carpetas compartidas ni almacenamiento en servidor. La biblioteca vive en el navegador.
 
+## Privacidad y datos
+
+- No hay registro de usuarios, cuentas ni inicio de sesión.
+- No se recogen ni se validan licencias.
+- Los PDF se abren, editan y exportan únicamente en el navegador: ningún documento ni dato se envía, guarda o recopila en un servidor.
+- No se usan cookies de seguimiento ni herramientas de analítica.
+
 ## Licencia y atribución
 
 Basado en [Stirling-PDF](https://github.com/Stirling-Tools/Stirling-PDF), publicado bajo licencia MIT. Consulta `LICENSE` para el texto completo y las atribuciones de terceros.
