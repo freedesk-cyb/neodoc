@@ -1,5 +1,5 @@
 import { Suspense, lazy } from "react";
-import { Navigate, useLocation } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import HomePage from "@app/pages/HomePage";
 import { LoadingFallback } from "@app/components/shared/LoadingFallback";
 import { stripBasePath } from "@app/constants/app";
@@ -15,8 +15,6 @@ const DocsPage = lazy(() => import("@app/components/docs/DocsPage"));
 function AppContent() {
   const { pathname } = useLocation();
   const path = stripBasePath(pathname);
-
-  if (path === "/") return <Navigate to="/pdf-text-editor" replace />;
 
   if (path.startsWith("/settings")) {
     return (
